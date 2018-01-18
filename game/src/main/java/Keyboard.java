@@ -6,14 +6,21 @@ public class Keyboard implements KeyListener
     private boolean[] keys = new boolean[120];
     public boolean up, down, left, right;
 
-    public void update()
-    {
+    public void update() {
         up = keys[KeyEvent.VK_W];
-        down = keys[KeyEvent.VK_D];
+        down = keys[KeyEvent.VK_S];
         left = keys[KeyEvent.VK_A];
-        right = keys[KeyEvent.VK_R];
+        right = keys[KeyEvent.VK_D];
 
-        System.out.println(up);
+
+        if(up)
+            System.out.println("UP");
+        else if(down)
+            System.out.println("DOWN");
+        else if(left)
+            System.out.println("LEFT");
+        else if(right)
+            System.out.println("RIGHT");
     }
 
     public void keyPressed(KeyEvent e)
