@@ -15,13 +15,12 @@ public class Main extends JPanel {
         gra.drawOval(10,5,70,50);
         gra.draw(new Ellipse2D.Double(0,40,20,20));
         doppelkreis a = new doppelkreis(50,50,50,80,30,30);
-        doppelkreis.drawnow((Graphics2D) g);
+        a.drawhere((Graphics2D) g);
 
 
     }
 
     private void moveObjects(){
-
 
 
     }
