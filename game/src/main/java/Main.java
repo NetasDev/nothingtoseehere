@@ -36,7 +36,7 @@ public class Main extends JPanel {
         frame.addKeyListener(keyboard);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+
         while(true)
         {
             keyboard.update();
