@@ -1,6 +1,7 @@
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class Keyboard
+public class Keyboard implements KeyListener
 {
     private boolean[] keys = new boolean[120];
     public boolean up, down, left, right;
@@ -11,6 +12,8 @@ public class Keyboard
         down = keys[KeyEvent.VK_D];
         left = keys[KeyEvent.VK_A];
         right = keys[KeyEvent.VK_R];
+
+        System.out.println(up);
     }
 
     public void keyPressed(KeyEvent e)
@@ -23,5 +26,5 @@ public class Keyboard
         keys[e.getKeyCode()] = false;
     }
 
-    public void keyTyepd(KeyEvent e){}
+    public void keyTyped(KeyEvent e){}
 }

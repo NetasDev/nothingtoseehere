@@ -1,9 +1,12 @@
 import javax.swing.*;
+import javax.swing.plaf.synth.SynthEditorPaneUI;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
 @SuppressWarnings("serial")
 public class Main extends JPanel {
+
+    private static Keyboard keyboard;
 
     @Override
     public void paint(Graphics g){
@@ -28,7 +31,17 @@ public class Main extends JPanel {
         frame.add(new Main());
         frame.setSize(1000,1000);
         frame.setVisible(true);
+
+        keyboard = new Keyboard();
+        frame.addKeyListener(keyboard);
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        while(true)
+        {
+            keyboard.update();
+        }
+
 
     }
 }
